@@ -1,18 +1,15 @@
-# Study_Planner_Assisstant
-A Streamlit web app that helps you generate a personalized study schedule based on your academic goals, topics, difficulty levels, and available study hours.
+# 📚 Study Planner Assistant
 
-# Features
+A Streamlit app that generates a personalized study schedule based on your goals, topics, and available study hours.
 
-Set Your Goal: Enter your academic goal (e.g., "Prepare for Data Structures Midterm").
-Add Topics: Add multiple topics with difficulty levels (1–5) dynamically.
-Set Study Hours: Specify available study hours for each day of the week.
-Generate Schedule: Get a clear, structured study plan with time allocated per topic and revision sessions for difficult topics.
+---
 
-# Installation
+## 🛠 Installation
 
-Clone the repository:
-git clone https://github.com/safiyah-asif/study-planner-assistant.git
-cd study-planner-assistant
+### 1️⃣ Clone the Repo
+```bash
+git clone https://github.com/YourUsername/Study_Planner_Assistant.git
+cd Study_Planner_Assistant
 
 # Create a virtual environment and activate it:
 
@@ -23,16 +20,21 @@ python -m venv .venv
 source .venv/bin/activate
 
 
-Install dependencies:
+### 2️⃣ Install dependencies:
 
 pip install -r requirements.txt
 
-
-Run the app:
+### 3️⃣ Run the app:
 
 streamlit run app.py
+```
+# Features
+Set Your Goal: Enter your academic goal (e.g., "Prepare for Data Structures Midterm").
+Add Topics: Add multiple topics with difficulty levels (1–5) dynamically.
+Set Study Hours: Specify available study hours for each day of the week.
+Generate Schedule: Get a clear, structured study plan with time allocated per topic and revision sessions for difficult topics.
 
-# How to Use
+# 🧠 How to Use
 
 Open the app in your browser.
 
@@ -44,10 +46,13 @@ Step 3: Enter your available study hours for each day and plan duration.
 
 Step 4: Click Generate Study Plan to see your personalized schedule.
 
-# Built With
+# 🧰 Tech Stack
 
 ### Streamlit
  – For interactive web interface
 
-### Pandas
- – For data handling and scheduling logic
+### Python
+ – For core functionaities
+
+### Pandas 
+ – For Generating Schedule in Table
