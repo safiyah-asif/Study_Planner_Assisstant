@@ -16,6 +16,8 @@ A Streamlit app that generates a personalized study schedule based on your goals
 python -m venv .venv
 # For Windows
 .venv\Scripts\activate
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass #if any error occurs run this first then again the previous one
+
 # macOS/Linux
 source .venv/bin/activate
 
