@@ -8,20 +8,18 @@ Add Topics: Add multiple topics with difficulty levels (1–5) dynamically.
 Set Study Hours: Specify available study hours for each day of the week.
 Generate Schedule: Get a clear, structured study plan with time allocated per topic and revision sessions for difficult topics.
 
-#Installation
+# Installation
 
 Clone the repository:
-
-git clone https://github.com/yourusername/study-planner-assistant.git
+git clone https://github.com/safiyah-asif/study-planner-assistant.git
 cd study-planner-assistant
 
-
-Create a virtual environment and activate it:
+# Create a virtual environment and activate it:
 
 python -m venv .venv
-# Windows
+### For Windows
 .venv\Scripts\activate
-# macOS/Linux
+### macOS/Linux
 source .venv/bin/activate
 
 
@@ -34,7 +32,7 @@ Run the app:
 
 streamlit run app.py
 
-#How to Use
+# How to Use
 
 Open the app in your browser.
 
@@ -46,10 +44,10 @@ Step 3: Enter your available study hours for each day and plan duration.
 
 Step 4: Click Generate Study Plan to see your personalized schedule.
 
-#Built With
+# Built With
 
-Streamlit
+### Streamlit
  – For interactive web interface
 
-Pandas
+### Pandas
  – For data handling and scheduling logic
