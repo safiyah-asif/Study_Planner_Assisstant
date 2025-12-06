@@ -14,7 +14,7 @@ Generate Schedule: Get a clear, structured study plan with time allocated per to
 
 ```bash
 1️⃣ Clone the Repo
-[git clone https://github.com/YourUsername/Study_Planner_Assistant.git]
+[git clone https://github.com/safiyah-asif/Study_Planner_Assistant.git]
 (https://github.com/safiyah-asif/Study_Planner_Assisstant.git)
 
 # Create a virtual environment and activate it:
