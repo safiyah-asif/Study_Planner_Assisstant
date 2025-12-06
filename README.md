@@ -2,6 +2,12 @@
 
 A Streamlit app that generates a personalized study schedule based on your goals, topics, and available study hours.
 
+# Features
+Set Your Goal: Enter your academic goal (e.g., "Prepare for Data Structures Midterm").
+Add Topics: Add multiple topics with difficulty levels (1–5) dynamically.
+Set Study Hours: Specify available study hours for each day of the week.
+Generate Schedule: Get a clear, structured study plan with time allocated per topic and revision sessions for difficult topics.
+
 ---
 
 ## 🛠 Installation
@@ -30,11 +36,6 @@ pip install -r requirements.txt
 
 streamlit run app.py
 ```
-# Features
-Set Your Goal: Enter your academic goal (e.g., "Prepare for Data Structures Midterm").
-Add Topics: Add multiple topics with difficulty levels (1–5) dynamically.
-Set Study Hours: Specify available study hours for each day of the week.
-Generate Schedule: Get a clear, structured study plan with time allocated per topic and revision sessions for difficult topics.
 
 # 🧠 How to Use
 
