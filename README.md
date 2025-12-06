@@ -6,25 +6,25 @@ A Streamlit app that generates a personalized study schedule based on your goals
 
 ## 🛠 Installation
 
-### 1️⃣ Clone the Repo
 ```bash
-git clone https://github.com/YourUsername/Study_Planner_Assistant.git
-cd Study_Planner_Assistant
+1️⃣ Clone the Repo
+[git clone https://github.com/YourUsername/Study_Planner_Assistant.git]
+(https://github.com/safiyah-asif/Study_Planner_Assisstant.git)
 
 # Create a virtual environment and activate it:
 
 python -m venv .venv
-### For Windows
+# For Windows
 .venv\Scripts\activate
-### macOS/Linux
+# macOS/Linux
 source .venv/bin/activate
 
 
-### 2️⃣ Install dependencies:
+2️⃣ Install dependencies:
 
 pip install -r requirements.txt
 
-### 3️⃣ Run the app:
+3️⃣ Run the app:
 
 streamlit run app.py
 ```
