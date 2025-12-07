@@ -3,6 +3,7 @@
 A Streamlit app that generates a personalized study schedule based on your goals, topics, and available study hours.
 
 # Features
+
 Set Your Goal: Enter your academic goal (e.g., "Prepare for Data Structures Midterm").
 Add Topics: Add multiple topics with difficulty levels (1–5) dynamically.
 Set Study Hours: Specify available study hours for each day of the week.
@@ -14,8 +15,7 @@ Generate Schedule: Get a clear, structured study plan with time allocated per to
 
 ```bash
 1️⃣ Clone the Repo
-[git clone https://github.com/safiyah-asif/Study_Planner_Assistant.git]
-(https://github.com/safiyah-asif/Study_Planner_Assisstant.git)
+[git clone https://github.com/Mid-Term-Exam/mid-Safiyah-Asif29.git]
 
 # Create a virtual environment and activate it:
 
@@ -52,10 +52,13 @@ Step 4: Click Generate Study Plan to see your personalized schedule.
 # 🧰 Tech Stack
 
 ### Streamlit
- – For interactive web interface
+
+– For interactive web interface
 
 ### Python
- – For core functionaities
 
-### Pandas 
- – For Generating Schedule in Table
+– For core functionaities
+
+### Pandas
+
+– For Generating Schedule in Table
