@@ -8,14 +8,56 @@ st.markdown(
     """
     <style>
     body {
-        background: linear-gradient(to right, #4CAF50, #81C784);
+        background:
+            radial-gradient(circle at 20% 50%, rgba(76, 175, 80, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(129, 199, 132, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(76, 175, 80, 0.2) 0%, transparent 50%),
+            linear-gradient(135deg, #4CAF50 0%, #81C784 100%);
+        background-size: 400px 400px, 300px 300px, 500px 500px, 100% 100%;
+        background-attachment: fixed;
+        animation: gradientShift 20s ease infinite;
         color: white;
+        min-height: 100vh;
     }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+        50% {
+            background-position: 100% 100%, 100% 100%, 100% 100%, 0% 0%;
+        }
+        100% {
+            background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+    }
+
     .main {
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.9) 50%,
+            rgba(255, 255, 255, 0.85) 100%);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px auto;
+        box-shadow:
+            0 8px 32px rgba(76, 175, 80, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 1000px;
+        position: relative;
+    }
+
+    .main::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #4CAF50, #81C784, #4CAF50);
+        border-radius: 15px 15px 0 0;
     }
     </style>
     """,
@@ -66,10 +108,12 @@ if st.session_state.step == "topics":
 
     # Add a new empty topic
     if st.button("➕ Add New Topic"):
+        # add a new topic that contains both
         st.session_state.topics.append({"name": "", "difficulty": 3})
 
     # Display all topics with input and slider
     if st.session_state.topics:
+        # enumerate for index to an iterable value
         for idx, topic in enumerate(st.session_state.topics):
             cols = st.columns([3, 2, 1])
             with cols[0]:
@@ -89,7 +133,7 @@ if st.session_state.step == "topics":
             with cols[2]:
                 if st.button("❌ Remove", key=f"remove_{idx}"):
                     st.session_state.topics.pop(idx)
-                    st.experimental_rerun()  # Refresh the page to remove the topic
+                    st.experimental_rerun()  # not working throwing error
 
         st.write("### 📂 Topics Added")
         df_top = pd.DataFrame(
@@ -159,8 +203,8 @@ def generate_schedule(goal, topics, hours_dict):
     # Create a DataFrame for topics
     df_topics = pd.DataFrame(topics, columns=["Topic", "Difficulty"])
 
-    # Calculate total weight (difficulty) and normalize it
-    total_difficulty = df_topics["Difficulty"].sum()
+    total_difficulty = df_topics["Difficulty"].sum()  # Example: 3 + 5 = 8
+    # Math: 3 / 8 = 0.375 , Physics: 5 / 8 = 0.625
     df_topics["Weight"] = df_topics["Difficulty"] / total_difficulty
 
     # Calculate total available hours
@@ -193,7 +237,7 @@ def generate_schedule(goal, topics, hours_dict):
         # Add revision time for difficult topics if time permits
         if topic_idx > 0 and df_topics.iloc[topic_idx - 1]["Difficulty"] >= 4 and hrs >= 0.5:
             schedule.append([day, "Revision Session", 0.5])
-            hrs -= 0.5
+            hrs -= 0.5 
 
     # Create a DataFrame for the schedule
     df_schedule = pd.DataFrame(schedule, columns=["Day", "Task", "Hours"])
